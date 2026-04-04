@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do | Wraith Defense Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lm-blue: #0056b3;
+            --deep-black: #050607;
+            --text-gray: #333333;
+            --border-light: #e0e0e0;
+            --bg-soft: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* --- HEADER --- */
+        .section-header {
+            background-color: var(--deep-black);
+            color: white;
+            padding: 80px 5% 40px 5%;
+        }
+
+        .section-header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            color: #aaa;
+            max-width: 600px;
+            font-size: 1.1rem;
+        }
+
+        /* --- CAPABILITY GRID --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .capability-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .capability-row:nth-child(even) {
+            direction: rtl;
+        }
+
+        .capability-row:nth-child(even) .text-box {
+            direction: ltr;
+        }
+
+        .text-box h2 {
+            font-size: 1.8rem;
+            color: #000;
+            margin-top: 0;
+            border-left: 4px solid var(--lm-blue);
+            padding-left: 20px;
+        }
+
+        .text-box p {
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .image-placeholder {
+            background-color: #eee;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: bold;
+            border: 1px solid var(--border-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- THE THREE PILLARS --- */
+        .pillar-section {
+            background-color: var(--bg-soft);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 40px;
+            border-top: 4px solid var(--lm-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .pillar-card h3 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #eef6ff;
+            color: var(--lm-blue);
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+
+        .back-nav {
+            padding: 20px 5%;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .back-nav a { color: var(--lm-blue); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="back-nav">
+        <a href="index.html">← BACK TO OVERVIEW</a>
+    </div>
+
+    <div class="section-header">
+        <h1>What We Do</h1>
+        <p>Providing total airspace dominance through kinetic interception, electronic warfare, and specialized autonomous systems.</p>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="capability-row">
+            <div class="text-box">
+                <div class="status-badge">DEFENSE & SECURITY</div>
+                <h2>Kinetic Interception & Neutralization</h2>
+                <p>Wraith Defense engineers the "Ghost Hunter" series—UAVs designed specifically to haunt, chase, and dismantle unauthorized drones in restricted airspace. Our interceptors use proprietary AI to predict flight patterns and neutralize threats before they reach their target.</p>
+                <p><strong>Focus:</strong> High-speed collision, net deployment, and signal jamming integration.</p>
+            </div>
+            <div class="image-placeholder">
+                [ ADVANCED INTERCEPTOR SCHEMATIC ]
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="text-box">
+                <div class="status-badge">CIVILIAN & INDUSTRIAL</div>
+                <h2>Enterprise Autonomy</h2>
+                <p>Beyond the battlefield, we empower the global economy. Our civilian-grade UAVs provide unprecedented support for large-scale agriculture, structural inspections of high-tension power lines, and rapid-response search and rescue (SAR) missions in non-permissive environments.</p>
+            </div>
+            <div class="image-placeholder">
+                [ CIVILIAN UTILITY PLATFORM ]
+            </div>
+        </div>
+
+        <div class="capability-row">
+            <div class="text-box">
+                <div class="status-badge">R&D INNOVATION</div>
+                <h2>Fiber-Optic Signal Integrity</h2>
+                <p>Modern drone warfare is only as strong as its connection. Wraith Defense is solving the "Fiber Gap" by developing specialized relay systems that fix optic fiber latency and interference issues, ensuring that long-range UAV operations remain unhackable and crystal clear.</p>
+            </div>
+            <div class="image-placeholder">
+                [ SIGNAL INTEGRITY R&D ]
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pillar-section">
+        <h2>Our Operational Pillars</h2>
+        <div class="pillar-grid">
+            <div class="pillar-card">
+                <h3>Detection</h3>
+                <p>Early-warning radar and acoustic sensors to identify hostile drones from miles away.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Decision</h3>
+                <p>Automated command-and-control (C2) software for rapid threat assessment.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Defeat</h3>
+                <p>Final-stage kinetic or electronic countermeasures to clear the airspace.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
