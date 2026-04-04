@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities | Wraith Defense Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lm-blue: #0056b3;
+            --deep-black: #0a0b0d;
+            --border: #e0e0e0;
+            --tech-gray: #f4f7f9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- TOP BANNER --- */
+        .cap-header {
+            background: var(--deep-black);
+            color: white;
+            padding: 60px 5%;
+            border-bottom: 4px solid var(--lm-blue);
+        }
+
+        .cap-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .cap-header p {
+            color: var(--lm-blue);
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* --- SPEC SECTION --- */
+        .spec-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+        }
+
+        .spec-content h2 {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--lm-blue);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+
+        .tech-table th {
+            text-align: left;
+            background: var(--tech-gray);
+            padding: 15px;
+            border: 1px solid var(--border);
+            color: var(--lm-blue);
+        }
+
+        .tech-table td {
+            padding: 15px;
+            border: 1px solid var(--border);
+        }
+
+        /* --- FEATURE HIGHLIGHTS --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--tech-gray);
+            padding: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card h4 {
+            margin-top: 0;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        /* --- THE INTERCEPTOR IMAGE SIDE --- */
+        .spec-visual {
+            background: #fdfdfd;
+            border: 1px solid var(--border);
+            padding: 20px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .wireframe-box {
+            width: 100%;
+            height: 400px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--lm-blue);
+            font-family: 'Roboto Mono', monospace;
+            text-align: center;
+            border: 2px dashed #333;
+        }
+
+        .back-link {
+            padding: 20px 5%;
+            font-size: 0.8rem;
+        }
+
+        .back-link a { text-decoration: none; color: var(--lm-blue); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="back-link"><a href="index.html">← SYSTEM HOME</a></div>
+
+    <header class="cap-header">
+        <h1>Core Capabilities</h1>
+        <p>// CLASSIFIED ENCRYPTION ACTIVE // USA-UK DEFENSE PROTOCOLS</p>
+    </header>
+
+    <div class="spec-container">
+        
+        <div class="spec-content">
+            <h2>WRAITH S-1 Interceptor</h2>
+            <p>The S-1 is our flagship anti-drone platform. Engineered for <strong>kinetic neutralization</strong>, it is the fastest interceptor in its class, capable of high-G maneuvers to hunt and dismantle hostile UAVs.</p>
+
+            <table class="tech-table">
+                <tr>
+                    <th>PARAMETER</th>
+                    <th>SPECIFICATION</th>
+                </tr>
+                <tr>
+                    <td>Max Velocity</td>
+                    <td>240 km/h (Burst Mode)</td>
+                </tr>
+                <tr>
+                    <td>Engagement Range</td>
+                    <td>15 km (LOS) / 40 km (S-Link)</td>
+                </tr>
+                <tr>
+                    <td>Neutralization Method</td>
+                    <td>Kinetic Impact / Electromagnetic Jamming</td>
+                </tr>
+                <tr>
+                    <td>Deployment Time</td>
+                    <td>< 2.5 Seconds from Detection</td>
+                </tr>
+            </table>
+
+            <h2>Advanced R&D: Fiber-Link™</h2>
+            <p>Addressing the critical "Fiber Gap" in drone communications, our proprietary Fiber-Link technology ensures zero-latency control even in high-interference environments.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Signal Hardening</h4>
+                    <p>Proprietary shielding that prevents optical interference and signal "ghosting" during long-range missions.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Multi-Spectrum Optic</h4>
+                    <p>Integrated sensors that switch between thermal, night-vision, and LiDAR in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Stealth Profile</h4>
+                    <p>Carbon-fiber composite frame with a radar cross-section (RCS) smaller than a common bird.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>AI Autonomy</h4>
+                    <p>Edge computing allows the drone to continue its mission if the link to the operator is severed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="spec-visual">
+            <div class="wireframe-box">
+                [ S-1 WRAITH INTERCEPTOR <br> 3D WIREFRAME RENDER ]
+            </div>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">
+                <strong>Fig 1.2:</strong> Structural analysis of the S-1 propulsion system. All components are ITA/EAR compliant.
+            </p>
+            <hr>
+            <p style="font-size: 0.9rem;"><strong>OPERATIONAL STATUS:</strong> FLIGHT READY</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
