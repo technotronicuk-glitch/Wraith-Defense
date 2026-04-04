@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers | Wraith Defense Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lm-blue: #0056b3;
+            --deep-black: #0a0b0d;
+            --border: #e0e0e0;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER --- */
+        .supplier-hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            color: white;
+            padding: 80px 5%;
+            text-align: left;
+        }
+
+        .supplier-hero h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .supplier-hero p {
+            color: var(--lm-blue);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* --- MAIN CONTENT --- */
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--lm-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #000;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3::before {
+            content: '■';
+            color: var(--lm-blue);
+        }
+
+        /* --- COMPLIANCE BOX --- */
+        .compliance-box {
+            background: var(--bg-light);
+            border-left: 5px solid var(--lm-blue);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .compliance-box h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .btn-portal {
+            display: inline-block;
+            background: var(--lm-blue);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .back-nav {
+            padding: 20px 5%;
+            font-size: 0.8rem;
+        }
+        .back-nav a { text-decoration: none; color: var(--lm-blue); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="back-nav"><a href="index.html">← CORPORATE HOME</a></div>
+
+    <header class="supplier-hero">
+        <h1>Supplier Partnerships</h1>
+        <p>Building the Future of Trans-Atlantic Defense Hardware</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>Integrity in the Supply Chain</h2>
+            <p>Wraith Defense Corporation relies on a global network of elite suppliers to provide the raw materials and specialized components required for our S-1 Interceptor and Ghost Guard systems. We seek partners who share our commitment to precision, ethics, and sovereign security.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>What We Buy</h3>
+                <p>We are currently sourcing high-grade materials for our 2026 production run:</p>
+                <ul style="font-size: 0.9rem;">
+                    <li>Aerospace-grade Carbon Fiber</li>
+                    <li>Advanced Optical Fiber Relays</li>
+                    <li>Solid-state LiDAR Sensors</li>
+                    <li>High-density Lithium-Sulphur Cells</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Quality Standards</h3>
+                <p>All suppliers must meet or exceed our internal Wraith Quality Management (WQM) protocols, including ISO 9001 and AS9100 certification for aerospace components.</p>
+            </div>
+
+            <div class="card">
+                <h3>Ethics & Diversity</h3>
+                <p>We prioritize suppliers who demonstrate sustainable manufacturing practices and maintain diverse, ethical workforces across the USA and UK regions.</p>
+            </div>
+        </div>
+
+        <div class="compliance-box">
+            <h2>Regulatory Compliance</h2>
+            <p>As a leading defense contractor, Wraith Defense strictly adheres to <strong>International Traffic in Arms Regulations (ITAR)</strong> and the <strong>Export Administration Regulations (EAR)</strong>. Prospective suppliers must be registered with their respective national defense trade controls.</p>
+            <a href="#" class="btn-portal">Access Supplier Portal →</a>
+        </div>
+    </div>
+
+</body>
+</html>
