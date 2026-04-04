@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are | Wraith Defense Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lm-blue: #0056b3;
+            --deep-black: #000000;
+            --text-gray: #333333;
+            --border-light: #e0e0e0;
+            --bg-off: #f4f7f9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* --- HEADER AREA --- */
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=2000'); /* Placeholder for a drone/tech image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .breadcrumb {
+            padding: 20px 5%;
+            background: var(--bg-off);
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a { color: var(--lm-blue); text-decoration: none; font-weight: bold; }
+
+        /* --- CONTENT SECTION --- */
+        .main-content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 5%;
+        }
+
+        .intro-lead {
+            font-size: 1.4rem;
+            color: var(--lm-blue);
+            font-weight: 300;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--lm-blue);
+            padding-left: 30px;
+        }
+
+        .company-profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            color: #000;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--lm-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .sector-card {
+            background: #fff;
+            border: 1px solid var(--border-light);
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .sector-card h3 {
+            color: var(--lm-blue);
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        /* --- INNOVATION SECTION --- */
+        .innovation-strip {
+            background: var(--deep-black);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .innovation-strip h2 { color: white; border-color: white; }
+        
+        .highlight-box {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 20px 40px;
+            margin-top: 20px;
+            font-family: monospace;
+            color: var(--lm-blue);
+            background: #fff;
+        }
+
+        footer-note {
+            display: block;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-hero">
+        <h1>Who We Are</h1>
+        <p>A Global Leader in Autonomous Airspace Sovereignty</p>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="index.html">HOME</a> / WHO WE ARE
+    </div>
+
+    <div class="main-content">
+        <p class="intro-lead">
+            Registered in 2026, <strong>Wraith Defense Corporation</strong> is a specialized USA-UK based defense industry leader. We are dedicated to engineering the world's most advanced Unmanned Aerial Vehicles (UAVs) for high-stakes environments.
+        </p>
+
+        <div class="company-profile">
+            <div class="text-area">
+                <h2>Our Mission</h2>
+                <p>Wraith Defense was born from a need for speed and surgical precision in an increasingly crowded sky. We don't just build drones; we build the sensors, the interceptors, and the protocols that define the next generation of aerial engagement.</p>
+                <p>From our dual headquarters in the United States and the United Kingdom, we leverage trans-Atlantic engineering talent to solve the most complex problems in modern aeronautics.</p>
+            </div>
+            <div class="sector-card">
+                <h3>Our Core Identity</h3>
+                <p><strong>Founded:</strong> 2026</p>
+                <p><strong>Jurisdiction:</strong> USA / UK</p>
+                <p><strong>Focus:</strong> Interception, Stealth, & Commercial UAVs</p>
+            </div>
+        </div>
+
+        <div class="company-profile">
+            <div class="sector-card">
+                <h3>Civilian Enterprise</h3>
+                <p>We provide industrial-grade solutions for a safer world:</p>
+                <ul>
+                    <li><strong>Agriculture:</strong> High-precision multispectral crop analysis.</li>
+                    <li><strong>Search & Rescue:</strong> UAVs designed for extreme environments.</li>
+                    <li><strong>Logistics:</strong> Secure, autonomous transport systems.</li>
+                </ul>
+            </div>
+            <div class="sector-card">
+                <h3>Military Grade</h3>
+                <p>Tactical dominance through superior hardware:</p>
+                <ul>
+                    <li><strong>Stealth Interceptors:</strong> High-velocity systems designed to hunt and neutralize hostile UAVs.</li>
+                    <li><strong>Electronic Warfare:</strong> Intelligent jamming to dismantle enemy drone attacks.</li>
+                    <li><strong>Optic-Fiber Innovation:</strong> Proprietary R&D solving signal integrity and optic-fiber challenges in secure communications.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="innovation-strip">
+        <h2>Advancing the Intercept</h2>
+        <p style="max-width: 800px; margin: 0 auto;">
+            We are currently pioneering a "First-to-Detect, First-to-Neutralize" platform that allows our drones to identify and dismantle foe hardware within milliseconds of airspace violation.
+        </p>
+        <div class="highlight-box">
+            STATUS: ACTIVE | HQ: ARLINGTON, VA • LONDON, UK | R&D: FARNBOROUGH AEROSPACE CENTRE
+        </div>
+    </div>
+
+    <p class="footer-note">© 2026 Wraith Defense Corporation. All information is subject to Export Control Laws.</p>
+
+</body>
+</html>
