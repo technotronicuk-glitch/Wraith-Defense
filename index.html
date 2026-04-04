@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wraith Defense | Next-Gen Aerial Interception</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0b0d;
+            --bg-card: #14161a;
+            --accent: #00f2ff; /* Tech Blue */
+            --text-main: #e0e0e0;
+            --text-dim: #94a3b8;
+            --border: #2d3139;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1d23 0%, #0a0b0d 100%);
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg-deep);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border);
+        }
+
+        .scanner-line {
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            position: absolute;
+            top: 0;
+            opacity: 0.2;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wraith Defense</div>
+        <nav>
+            <a href="#" style="color: var(--text-main); text-decoration: none; margin-left: 20px;">Systems</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none; margin-left: 20px;">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="scanner-line"></div>
+        <h1>DEFEAT THE INVISIBLE.</h1>
+        <p>Specialized in high-velocity interceptor UAVs and military-grade anti-drone countermeasures for total airspace dominance.</p>
+        <a href="#contact" class="btn">Request Capabilities Brief</a>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Interceptor S-1</h3>
+            <p>A high-speed kinetic interceptor designed to outpace and neutralize unauthorized UAVs in seconds.</p>
+        </div>
+        <div class="card">
+            <h3>Ghost Guard</h3>
+            <p>Advanced signal-masking technology that makes your infrastructure invisible to hostile drone surveillance.</p>
+        </div>
+        <div class="card">
+            <h3>Rapid Deployment</h3>
+            <p>Autonomous launch systems capable of responding to threats within 1.5 seconds of detection.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 WRAITH DEFENSE SYSTEMS. ALL RIGHTS RESERVED. SECURED BY ENCRYPTION.
+    </footer>
+
+</body>
+</html>
