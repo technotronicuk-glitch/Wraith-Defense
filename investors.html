@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors | Wraith Defense Corporation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lm-blue: #0056b3;
+            --deep-black: #0a0b0d;
+            --border: #e0e0e0;
+            --positive-green: #28a745;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- STOCK TICKER STYLE HEADER --- */
+        .investor-hero {
+            background: #f8f9fa;
+            padding: 40px 5%;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ticker-bar {
+            background: var(--deep-black);
+            color: white;
+            padding: 10px 5%;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            display: flex;
+            gap: 30px;
+        }
+
+        .ticker-up { color: var(--positive-green); }
+
+        .header-main h1 {
+            font-size: 2.5rem;
+            margin: 20px 0 10px 0;
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        /* --- DASHBOARD LAYOUT --- */
+        .investor-grid {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--lm-blue);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: #fdfdfd;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lm-blue);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        /* --- RESOURCES SIDEBAR --- */
+        .sidebar h3 {
+            font-size: 1.1rem;
+            background: var(--lm-blue);
+            color: white;
+            padding: 15px;
+            margin-top: 0;
+        }
+
+        .download-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .download-list li {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-list li a {
+            text-decoration: none;
+            color: var(--lm-blue);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .back-nav {
+            padding: 20px 5%;
+            font-size: 0.8rem;
+        }
+        .back-nav a { text-decoration: none; color: var(--lm-blue); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="ticker-bar">
+        <span>WRTH (NYSE) $142.50 <span class="ticker-up">▲ 2.4%</span></span>
+        <span>FTSE 100 8,120.4 <span class="ticker-up">▲ 0.8%</span></span>
+        <span>MARKET CAP: $4.2B</span>
+    </div>
+
+    <div class="back-nav"><a href="index.html">← CORPORATE HOME</a></div>
+
+    <div class="investor-hero">
+        <div class="header-main">
+            <h1>Investor Relations</h1>
+            <p>Driving shareholder value through trans-atlantic defense innovation and UAV market dominance.</p>
+        </div>
+    </div>
+
+    <div class="investor-grid">
+        
+        <div class="main-reports">
+            <div class="card">
+                <h2>Financial Highlights</h2>
+                <p>Wraith Defense continues to see strong demand for the S-1 Interceptor series across NATO jurisdictions. Our 2026 fiscal outlook remains robust with a record backlog of government contracts.</p>
+                
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <span class="stat-value">$1.2B</span>
+                        <span class="stat-label">R&D Investment</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">34%</span>
+                        <span class="stat-label">YoY Growth</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">42</span>
+                        <span class="stat-label">Patents Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Strategic Growth</h2>
+                <p>Our focus for 2026-2027 is the expansion of our <strong>Fiber-Link™</strong> infrastructure. By solving the fiber-optic latency problem in long-range drone control, we are positioning Wraith Defense as the sole provider for deep-theater autonomous missions.</p>
+                <p>We are currently exploring facility expansions in both the Virginia defense corridor and the UK aerospace cluster to meet rising demand.</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Investor Resources</h3>
+            <ul class="download-list">
+                <li>
+                    <span>2026 Annual Report</span>
+                    <a href="#">PDF ↓</a>
+                </li>
+                <li>
+                    <span>Q1 Capability Brief</span>
+                    <a href="#">PDF ↓</a>
+                </li>
+                <li>
+                    <span>Stockholder Meeting</span>
+                    <a href="#">LINK ↗</a>
+                </li>
+                <li>
+                    <span>Governance Docs</span>
+                    <a href="#">VIEW</a>
+                </li>
+            </ul>
+
+            <div class="card" style="margin-top: 30px; background: #fdfdfd;">
+                <h4>Shareholder Contact</h4>
+                <p style="font-size: 0.85rem;">For inquiries regarding stock transfers or financial filings:<br>
+                <strong>ir@wraithdefense.com</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
