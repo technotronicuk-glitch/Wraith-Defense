@@ -21,7 +21,7 @@
             color: var(--text-gray);
         }
 
-        /* --- HEADER (Lockheed Style) --- */
+        /* --- HEADER --- */
         header {
             display: flex;
             align-items: center;
@@ -40,73 +40,49 @@
             font-size: 1.4rem;
             color: var(--lm-blue);
             letter-spacing: -1px;
-            display: flex;
-            align-items: center;
+            text-decoration: none;
         }
+        .logo-area span { color: #000; }
 
-        .logo-area span { color: #000; margin-right: 5px; }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
+        nav { display: flex; gap: 25px; }
         nav a {
             text-decoration: none;
             color: #000;
             font-weight: 500;
             font-size: 0.95rem;
-            display: flex;
-            align-items: center;
         }
+        nav a:after { content: ' ▾'; font-size: 0.7rem; color: var(--lm-blue); }
 
-        nav a:after {
-            content: ' ▾';
-            font-size: 0.7rem;
-            margin-left: 5px;
-            color: var(--lm-blue);
-        }
-
-        .header-icons {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             background: var(--deep-black);
             color: white;
-            padding: 100px 5%;
-            text-align: left;
-            min-height: 500px;
+            padding: 120px 5%;
+            min-height: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin: 0 0 20px 0;
-            max-width: 800px;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-            color: #ccc;
-        }
-
-        /* --- FOOTER TOP (Black Section) --- */
-        .footer-top {
-            background: var(--deep-black);
+        .hero h1 { font-size: 3.5rem; margin: 0 0 20px 0; text-transform: uppercase; }
+        .btn-blue {
+            background: var(--lm-blue);
             color: white;
-            padding: 60px 5%;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        /* --- FOOTER SECTION --- */
+        footer { background: var(--deep-black); color: white; margin-top: 60px; }
+        
+        .footer-top {
             display: grid;
             grid-template-columns: repeat(4, 1fr) 1.5fr;
-            gap: 20px;
+            gap: 40px;
+            padding: 60px 5%;
+            border-bottom: 1px solid #222;
         }
 
         .footer-col h4 {
@@ -118,158 +94,103 @@
             padding-bottom: 5px;
         }
 
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-col ul li a { color: #bbb; text-decoration: none; }
+        .footer-col ul li a:hover { color: #fff; }
 
-        .footer-col ul li {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: #bbb;
-            cursor: pointer;
-        }
+        .newsletter { border-left: 1px solid #333; padding-left: 40px; }
+        .newsletter h3 { font-size: 1.3rem; margin-bottom: 10px; }
 
-        .footer-col ul li:hover { color: white; }
-
-        .newsletter {
-            border-left: 1px solid #333;
-            padding-left: 40px;
-        }
-
-        .newsletter h3 { font-size: 1.3rem; margin-bottom: 15px; }
-
-        .btn-blue {
-            background: var(--lm-blue);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
-        /* --- FOOTER BOTTOM (White Section) --- */
         .footer-bottom {
+            background: #fff;
+            color: #333;
             padding: 30px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid var(--border-light);
             font-size: 0.85rem;
         }
 
-        .footer-bottom-links {
-            display: flex;
-            gap: 20px;
-        }
+        .footer-bottom-links a { color: #333; margin-right: 15px; text-decoration: underline; }
+        .social-icons span { margin-left: 15px; font-weight: bold; cursor: pointer; }
 
-        .footer-bottom-links a {
-            color: var(--text-gray);
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            font-size: 1.2rem;
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-area">
-            <span>WRAITH</span> DEFENSE
-        </div>
+        <a href="index.html" class="logo-area"><span>WRAITH</span> DEFENSE</a>
         <nav>
-           <nav>
-    <a href="who-we-are.html">Who we are</a>
-    <a href="what-we-do.html">What we do</a>
-    <a href="capabilities.html">Capabilities</a>
-    <a href="investors.html">Investors</a>
-    <a href="suppliers.html">Suppliers</a>
+            <a href="who-we-are.html">Who we are</a>
+            <a href="what-we-do.html">What we do</a>
+            <a href="capabilities.html">Capabilities</a>
+            <a href="investors.html">Investors</a>
+            <a href="suppliers.html">Suppliers</a>
         </nav>
-        <div class="header-icons">
-            <span>🌐</span>
-            <span>🔍</span>
-        </div>
+        <div>🔍</div>
     </header>
 
     <section class="hero">
         <h1>Hunting the Skies.</h1>
-        <p>Providing dominant anti-drone systems and high-velocity interceptors for global defense sectors.</p>
-        <a href="#" class="btn-blue">VIEW CAPABILITIES →</a>
+        <p style="max-width: 600px; color: #ccc; margin-bottom: 30px;">
+            Specializing in high-velocity interceptor UAVs and military-grade defense systems for total airspace dominance.
+        </p>
+        <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
     </section>
 
-    <div class="footer-top">
-        <div class="footer-col">
-            <h4>What We Do</h4>
-            <ul>
-                <li>Our Interceptors</li>
-                <li>UAV Defense</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Who We Are</h4>
-            <ul>
-                <li>Leadership</li>
-                <li>Careers</li>
-                <li>Sustainability</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Information</h4>
-            <ul>
-                <li>Newsroom</li>
-                <li>International</li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Connect</h4>
-            <ul>
-                <li>Contact Us</li>
-                <li>Media Relations</li>
-            </ul>
-        </div>
-        <div class="newsletter">
-            <h3>Join the Wraith Star newsletter</h3>
-            <p style="font-size: 0.85rem; color: #999;">Get updates on high-velocity interceptor tech and defense innovations.</p>
-            <a href="#" class="btn-blue">SIGN UP NOW →</a>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>What We Do</h4>
+                <ul>
+                    <li><a href="what-we-do.html">Our Interceptors</a></li>
+                    <li><a href="capabilities.html">UAV Defense</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Who We Are</h4>
+                <ul>
+                    <li><a href="who-we-are.html">Leadership</a></li>
+                    <li><a href="who-we-are.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="investors.html">Investors</a></li>
+                    <li><a href="suppliers.html">Suppliers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Media Relations</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Join the Wraith Star</h3>
+                <p style="font-size: 0.8rem; color: #888;">Get updates on interceptor tech and defense innovations.</p>
+                <a href="#" class="btn-blue" style="margin-top: 10px;">SIGN UP NOW</a>
+            </div>
         </div>
 
-    <div class="footer-bottom">
-        <div>
-            <div class="logo-area" style="font-size: 1rem; margin-bottom: 5px;">WRAITH DEFENSE</div>
-            <p>© 2026 Wraith Defense Corporation. All Rights Reserved.</p>
+        <div class="footer-bottom">
+            <div>
+                <div style="font-weight: 800; color: var(--lm-blue);">WRAITH DEFENSE</div>
+                <p>© 2026 Wraith Defense Corporation. All Rights Reserved.</p>
+            </div>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+            <div class="social-icons">
+                <span>f</span> <span>𝕏</span> <span>in</span>
+            </div>
         </div>
-        <div class="footer-bottom-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="cookies.html">Cookies</a>
-        </div>
-        <div class="social-icons">
-            <span>f</span> <span>𝕏</span> <span>y</span> <span>in</span> <span>o</span>
-        </div>
-    </div>
-    <div class="footer-col">
-    <h4>What We Do</h4>
-    <ul>
-        <li><a href="what-we-do.html" style="color:inherit; text-decoration:none;">Our Interceptors</a></li>
-        <li><a href="capabilities.html" style="color:inherit; text-decoration:none;">UAV Defense</a></li>
-    </ul>
-</div>
-<div class="footer-col">
-    <h4>Who We Are</h4>
-    <ul>
-        <li><a href="who-we-are.html" style="color:inherit; text-decoration:none;">Leadership</a></li>
-        <li><a href="investors.html" style="color:inherit; text-decoration:none;">Investors</a></li>
-    </ul>
-</div>
+    </footer>
 
 </body>
 </html>
