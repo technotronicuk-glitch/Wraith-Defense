@@ -131,13 +131,111 @@
         <div>🔍</div>
     </header>
 
-    <section class="hero">
-    <h1>Hunting the Skies.</h1>
-    <p style="max-width: 600px; color: #ccc; margin-bottom: 30px;">
-        Specializing in high-velocity interceptor UAVs and military-grade defense systems for total airspace dominance.
-    </p>
-    <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
+    <section class="hero-container">
+    <div class="hero-text">
+        <h1>Hunting the Skies.</h1>
+        <p>
+            Specializing in high-velocity interceptor UAVs and military-grade defense systems for total airspace dominance.
+        </p>
+        <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
+    </div>
+
+    <div class="hero-gallery">
+        <div class="gallery-grid">
+            <div class="grid-item"><img src="drone1.jpg" alt="M-12 Specs 1"></div>
+            <div class="grid-item"><img src="drone2.jpg" alt="M-12 Specs 2"></div>
+            <div class="grid-item"><img src="drone3.jpg" alt="M-12 Specs 3"></div>
+            <div class="grid-item"><img src="drone4.jpg" alt="M-12 Specs 4"></div>
+        </div>
+    </div>
 </section>
+
+<style>
+/* 2-Column Layout */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8%;
+    background: #000;
+    min-height: 80vh;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Gallery Styling */
+.hero-gallery {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.grid-item {
+    background: #111;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #333;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.grid-item:hover {
+    border-color: #0056b3; /* Wraith Blue Glow */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+}
+
+.grid-item:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+    .hero-text { max-width: 100%; }
+    .gallery-grid { max-width: 400px; margin: 0 auto; }
+}
+</style>
 
 <section class="product-slider">
     <div class="slider-header">
@@ -270,43 +368,76 @@
     
 <div id="wraith-chat" class="chat-window">
     <div class="chat-head">
-        <span>WRAITH DEFENSE TERMINAL</span>
-        <button onclick="toggleChat()" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">&times;</button>
+        <span>Wraith Defense Support</span>
+        <button onclick="toggleChat()" class="close-btn">&times;</button>
     </div>
     <div class="chat-body" id="chat-body">
-        <p class="bot-msg">Welcome to Wraith Defense. Systems online. How may we assist your mission?</p>
+        <div class="bot-msg">Welcome to Wraith Defense. How may we assist you today?</div>
+        
         <div class="chat-options">
-            <button onclick="sendInquiry('M-12 Technical Specs')">Request M-12 Specs</button>
+            <button onclick="sendInquiry('M-12 Technical Specs')">M-12 Technical Specifications</button>
             <button onclick="sendInquiry('Procurement Quote')">Request Procurement Quote</button>
-            <button onclick="sendInquiry('Fleet Support')">Technical Field Support</button>
+            <button onclick="sendInquiry('Field Support')">Technical Field Support</button>
         </div>
     </div>
 </div>
 
-<button class="chat-toggle-btn" onclick="toggleChat()">💬</button>
+<button class="chat-toggle-btn" onclick="toggleChat()">
+    <span class="chat-icon">💬</span>
+</button>
 
 <style>
+/* Resetting to a Clean, Modern Font */
 .chat-window {
-    position: fixed; bottom: 100px; right: 30px; width: 320px;
-    background: #050505; border: 1px solid #0056b3;
+    position: fixed; bottom: 100px; right: 30px; width: 340px;
+    background: #ffffff; border-radius: 8px; overflow: hidden;
     display: none; flex-direction: column; z-index: 9999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8); font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-.chat-head { background: #0056b3; color: #fff; padding: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; }
-.chat-body { padding: 20px; height: 300px; overflow-y: auto; }
-.bot-msg { color: #00ff00; font-size: 13px; margin-bottom: 15px; line-height: 1.4; }
-.chat-options button {
-    display: block; width: 100%; text-align: left; background: #111;
-    border: 1px solid #222; color: #fff; padding: 10px; margin-bottom: 8px;
-    cursor: pointer; font-size: 12px; transition: 0.2s;
-}
-.chat-options button:hover { border-color: #0056b3; background: #001a33; }
 
+.chat-head { 
+    background: #004a99; color: #ffffff; padding: 16px; 
+    display: flex; justify-content: space-between; align-items: center; 
+    font-size: 14px; font-weight: 600; 
+}
+
+.close-btn { background: none; border: none; color: white; font-size: 22px; cursor: pointer; opacity: 0.8; }
+.close-btn:hover { opacity: 1; }
+
+.chat-body { padding: 20px; background: #f9f9f9; min-height: 280px; }
+
+.bot-msg { 
+    color: #333; font-size: 14px; margin-bottom: 20px; 
+    line-height: 1.5; background: #fff; padding: 12px; 
+    border-radius: 4px; border: 1px solid #eee; 
+}
+
+/* Professional Option Buttons */
+.chat-options button {
+    display: block; width: 100%; text-align: center; 
+    background: #ffffff; border: 1px solid #004a99; 
+    color: #004a99; padding: 12px; margin-bottom: 10px;
+    cursor: pointer; font-size: 13px; font-weight: 500;
+    border-radius: 4px; transition: all 0.2s ease;
+}
+
+.chat-options button:hover { 
+    background: #004a99; color: #ffffff; 
+}
+
+/* The Floating Button */
 .chat-toggle-btn {
     position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
-    border-radius: 50%; background: #0056b3; border: none; color: #fff;
-    font-size: 24px; cursor: pointer; z-index: 9999; box-shadow: 0 4px 15px rgba(0,86,179,0.4);
+    border-radius: 50%; background: #004a99; border: none; color: #fff;
+    cursor: pointer; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
 }
+.chat-toggle-btn:hover { transform: scale(1.05); }
+.chat-icon { font-size: 24px; }
+
+/* Status text for interactions */
+.status-msg { color: #777; font-size: 12px; font-style: italic; margin-top: 10px; text-align: center; }
 </style>
 
 <script>
@@ -317,10 +448,19 @@ function toggleChat() {
 
 function sendInquiry(subject) {
     const body = document.getElementById('chat-body');
-    body.innerHTML += `<p style="color:#aaa; font-size:12px; text-align:right;">Requesting: ${subject}...</p>`;
+    // Clear options to show status
+    const options = body.querySelector('.chat-options');
+    options.style.display = 'none';
+    
+    body.innerHTML += `<p class="status-msg">Requesting ${subject}...</p>`;
+    
     setTimeout(() => {
-        body.innerHTML += `<p class="bot-msg">Request received. A Defense Relations officer will contact you shortly.</p>`;
-    }, 1000);
+        body.innerHTML += `
+            <div class="bot-msg" style="margin-top:15px; border-left: 4px solid #004a99;">
+                <strong>Request Received.</strong><br>
+                A Wraith Defense officer will contact you shortly regarding ${subject}.
+            </div>`;
+    }, 800);
 }
 </script>
 </body>
