@@ -132,12 +132,88 @@
     </header>
 
     <section class="hero">
-        <h1>Hunting the Skies.</h1>
-        <p style="max-width: 600px; color: #ccc; margin-bottom: 30px;">
-            Specializing in high-velocity interceptor UAVs and military-grade defense systems for total airspace dominance.
-        </p>
-        <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
-    </section>
+    <h1>Hunting the Skies.</h1>
+    <p style="max-width: 600px; color: #ccc; margin-bottom: 30px;">
+        Specializing in high-velocity interceptor UAVs and military-grade defense systems for total airspace dominance.
+    </p>
+    <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
+</section>
+
+<section class="product-slider">
+    <div class="slider-header">
+        <h2 style="color:white; margin-bottom: 20px; font-size: 14px; letter-spacing: 3px;">SYSTEM VARIANTS</h2>
+    </div>
+    <div class="slider-container">
+        <div class="slide">
+            <img src="drone1.jpg" alt="M-12 Recon">
+            <div class="slide-content">
+                <h3>M-12: RECONNAISSANCE</h3>
+                <p>Equipped with 30x Optical Zoom for long-range intelligence gathering.</p>
+                <a href="m12-specs.html" class="btn-outline">VIEW SPECS →</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="drone2.jpg" alt="M-12 Thermal">
+            <div class="slide-content">
+                <h3>M-12: THERMAL INTERCEPT</h3>
+                <p>High-sensitivity IR sensors for persistent nighttime dominance.</p>
+                <a href="m12-specs.html" class="btn-outline">VIEW SPECS →</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="drone3.jpg" alt="M-12 Logistics">
+            <div class="slide-content">
+                <h3>M-12: LOGISTICS LIFT</h3>
+                <p>Heavy payload configuration optimized for 55kg supply delivery.</p>
+                <a href="m12-specs.html" class="btn-outline">VIEW SPECS →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Slider Styling */
+.product-slider { background: #000; padding: 60px 5%; border-top: 1px solid #222; }
+.slider-container { 
+    display: flex; 
+    overflow-x: auto; 
+    gap: 25px; 
+    padding-bottom: 30px;
+    scroll-snap-type: x mandatory;
+}
+/* Hide scrollbar but keep functionality */
+.slider-container::-webkit-scrollbar { height: 3px; }
+.slider-container::-webkit-scrollbar-thumb { background: #0056b3; }
+
+.slide { 
+    min-width: 350px; 
+    background: #0a0a0a; 
+    border: 1px solid #222; 
+    scroll-snap-align: center;
+}
+.slide img { width: 100%; height: 250px; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+.slide:hover img { filter: grayscale(0%); }
+
+.slide-content { padding: 25px; }
+.slide-content h3 { color: #fff; font-size: 16px; letter-spacing: 1px; margin-bottom: 10px; }
+.slide-content p { color: #777; font-size: 13px; line-height: 1.6; margin-bottom: 20px; height: 40px; }
+
+/* The Button Fix */
+.btn-outline {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #0056b3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.btn-outline:hover { background: #0056b3; color: white; }
+
+@media (max-width: 768px) { .slide { min-width: 85%; } }
+</style>
 
     <footer>
         <div class="footer-top">
@@ -191,6 +267,61 @@
             </div>
         </div>
     </footer>
+    
+<div id="wraith-chat" class="chat-window">
+    <div class="chat-head">
+        <span>WRAITH DEFENSE TERMINAL</span>
+        <button onclick="toggleChat()" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">&times;</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <p class="bot-msg">Welcome to Wraith Defense. Systems online. How may we assist your mission?</p>
+        <div class="chat-options">
+            <button onclick="sendInquiry('M-12 Technical Specs')">Request M-12 Specs</button>
+            <button onclick="sendInquiry('Procurement Quote')">Request Procurement Quote</button>
+            <button onclick="sendInquiry('Fleet Support')">Technical Field Support</button>
+        </div>
+    </div>
+</div>
 
+<button class="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<style>
+.chat-window {
+    position: fixed; bottom: 100px; right: 30px; width: 320px;
+    background: #050505; border: 1px solid #0056b3;
+    display: none; flex-direction: column; z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8); font-family: 'Courier New', Courier, monospace;
+}
+.chat-head { background: #0056b3; color: #fff; padding: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; }
+.chat-body { padding: 20px; height: 300px; overflow-y: auto; }
+.bot-msg { color: #00ff00; font-size: 13px; margin-bottom: 15px; line-height: 1.4; }
+.chat-options button {
+    display: block; width: 100%; text-align: left; background: #111;
+    border: 1px solid #222; color: #fff; padding: 10px; margin-bottom: 8px;
+    cursor: pointer; font-size: 12px; transition: 0.2s;
+}
+.chat-options button:hover { border-color: #0056b3; background: #001a33; }
+
+.chat-toggle-btn {
+    position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+    border-radius: 50%; background: #0056b3; border: none; color: #fff;
+    font-size: 24px; cursor: pointer; z-index: 9999; box-shadow: 0 4px 15px rgba(0,86,179,0.4);
+}
+</style>
+
+<script>
+function toggleChat() {
+    const chat = document.getElementById('wraith-chat');
+    chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+}
+
+function sendInquiry(subject) {
+    const body = document.getElementById('chat-body');
+    body.innerHTML += `<p style="color:#aaa; font-size:12px; text-align:right;">Requesting: ${subject}...</p>`;
+    setTimeout(() => {
+        body.innerHTML += `<p class="bot-msg">Request received. A Defense Relations officer will contact you shortly.</p>`;
+    }, 1000);
+}
+</script>
 </body>
 </html>
