@@ -131,7 +131,7 @@
         <div>🔍</div>
     </header>
 
-    <section class="hero-container">
+  <section class="hero-container">
     <div class="hero-text">
         <h1>Hunting the Skies.</h1>
         <p>
@@ -140,18 +140,23 @@
         <a href="capabilities.html" class="btn-blue">VIEW CAPABILITIES →</a>
     </div>
 
-    <div class="hero-gallery">
-        <div class="gallery-grid">
-            <div class="grid-item"><img src="drone1.jpg" alt="M-12 Specs 1"></div>
-            <div class="grid-item"><img src="drone2.jpg" alt="M-12 Specs 2"></div>
-            <div class="grid-item"><img src="drone3.jpg" alt="M-12 Specs 3"></div>
-            <div class="grid-item"><img src="drone4.jpg" alt="M-12 Specs 4"></div>
+    <div class="hero-slideshow">
+        <div class="slider-wrapper">
+            <button class="slide-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+            
+            <div class="slides-container" id="hero-slider">
+                <div class="hero-slide active"><img src="drone1.jpg" alt="M-12 One"></div>
+                <div class="hero-slide"><img src="drone2.jpg" alt="M-12 Two"></div>
+                <div class="hero-slide"><img src="drone3.avif" alt="M-12 Three"></div>
+                <div class="hero-slide"><img src="drone4.jpg" alt="M-12 Four"></div>
+            </div>
+
+            <button class="slide-arrow next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </div>
 </section>
 
 <style>
-/* 2-Column Layout */
 .hero-container {
     display: flex;
     align-items: center;
@@ -162,79 +167,85 @@
     gap: 50px;
 }
 
-.hero-text {
-    flex: 1;
-    max-width: 550px;
-}
+.hero-text { flex: 1; max-width: 500px; }
+.hero-text h1 { font-size: 3.5rem; color: #fff; margin-bottom: 20px; }
+.hero-text p { color: #ccc; margin-bottom: 40px; line-height: 1.6; }
 
-.hero-text h1 {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.hero-text p {
-    color: #ccc;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-/* Gallery Styling */
-.hero-gallery {
+/* Slideshow Styling */
+.hero-slideshow {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.grid-item {
-    background: #111;
-    aspect-ratio: 1 / 1;
-    border: 1px solid #333;
-    overflow: hidden;
+.slider-wrapper {
     position: relative;
-    transition: border-color 0.3s ease;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border: 1px solid #333;
 }
 
-.grid-item:hover {
-    border-color: #0056b3; /* Wraith Blue Glow */
+.slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.grid-item img {
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7;
-    filter: grayscale(100%);
-    transition: 0.5s ease;
+    /* Removed Grayscale - Images are now Full Color */
 }
 
-.grid-item:hover img {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: scale(1.1);
+/* Arrows */
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 86, 179, 0.7);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
 }
 
-/* Responsive fix for mobile */
+.slide-arrow:hover { background: #0056b3; }
+.prev { left: 0; border-radius: 0 4px 4px 0; }
+.next { right: 0; border-radius: 4px 0 0 4px; }
+
 @media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 5%;
-    }
+    .hero-container { flex-direction: column; text-align: center; }
     .hero-text { max-width: 100%; }
-    .gallery-grid { max-width: 400px; margin: 0 auto; }
 }
+</style>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function moveSlide(direction) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+</script>  
 </style>
 
 <section class="product-slider">
